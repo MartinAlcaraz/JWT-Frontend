@@ -1,7 +1,7 @@
 
 // const URI = '/api/users';                //  si estamos en un servidor para produccion se deja asi   = '/api/users'
-//const URI = 'https://localhost:5000/api'; // en desarrollo
-const URI = 'https://jsonwebtoken-backend.onrender.com:1000/api'
+//const URI = 'https://localhost:5000/'; // en desarrollo
+const URI = 'https://jsonwebtoken-backend.onrender.com/'
 // const URI = 'https://album-fotos-backend-production.up.railway.app/api/users';
 // const URI = 'https://albumfotos-api.onrender.com/api/users'
 
@@ -9,7 +9,7 @@ const UserServices = {};
 
 UserServices.isLoggedUser = async () => {
     try {
-        const response = await fetch(URI + '/users/login', {
+        const response = await fetch(URI + 'api/users/login', {
             method: 'GET',
             credentials: 'include',
             headers: {
@@ -31,7 +31,7 @@ UserServices.isLoggedUser = async () => {
 
 UserServices.getProfile = async () => {
     try {
-        const response = await fetch(URI + '/users/profile', {
+        const response = await fetch(URI + 'api/users/profile', {
             method: 'GET',
             credentials: 'include',
             headers: {
@@ -52,7 +52,7 @@ UserServices.getProfile = async () => {
 
 UserServices.logoutUser = async () => {
     try {
-        const response = await fetch(URI + '/users/logout', {
+        const response = await fetch(URI + 'api/users/logout', {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -70,7 +70,7 @@ UserServices.logoutUser = async () => {
 
 UserServices.loginUser = async (authentication) => {
     try {
-        const response = await fetch(URI + '/users/login', {
+        const response = await fetch(URI + 'api/users/login', {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -89,7 +89,7 @@ UserServices.loginUser = async (authentication) => {
 
 UserServices.registerUser = async (user) => {
     try {
-        const response = await fetch(URI + '/users/register', {
+        const response = await fetch(URI + 'api/users/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
