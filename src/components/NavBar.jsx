@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { UserContext } from "../context/UserContext.jsx";
 
 export default function NavBar() {
+
     const navigate = useNavigate();
     const { user, setUnloggedUser } = useContext(UserContext);
 
@@ -26,7 +27,6 @@ export default function NavBar() {
         <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 mb-4">
             <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
                 <Link to="/">Jason Web Token</Link>
-
                 <div >
                     {!user ?
                         <div>
